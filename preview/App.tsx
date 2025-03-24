@@ -18,15 +18,15 @@ const TestUI = () => {
 };
 
 export default function App() {
-    return (
-      <div className="dark">
-        <ModalProvider config={config}>
-          <div className="min-h-screen bg-zinc-100 dark:bg-zinc-900 p-8 text-center">
-            <h1 className="text-2xl text-zinc-800 dark:text-white">Preview Modal</h1>
-            <TestUI />
-          </div>
-        </ModalProvider>
-      </div>
-    );
-  }
-  
+  return (
+    <div className="dark">
+      <ModalProvider config={config}>
+        <div className="min-h-screen bg-zinc-100 dark:bg-zinc-900 p-8 text-center">
+          <h1 className="text-2xl text-zinc-800 dark:text-white">Preview Modal</h1>
+          <TestUI />
+        </div>
+      </ModalProvider>
+    </div>
+  );
+}
+

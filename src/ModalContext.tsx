@@ -1,4 +1,3 @@
-
 // src/ModalContext.tsx
 "use client";
 
@@ -15,6 +14,19 @@ let sharedConfig: ModalFormConfig;
 
 export const ModalProvider = ({ children, config }: { children: ReactNode; config: ModalFormConfig }) => {
   const [isOpen, setIsOpen] = useState(false);
+  // Validate config fields
+  if (!config.apiKey?.trim()) {
+    throw new ModalFormError('API Key is required.', 'ERR_MISSING_API_KEY');
+  }
+
+  if (!config.contractAddress?.trim()) {
+    throw new ModalFormError('Contract address is required.', 'ERR_MISSING_CONTRACT_ADDRESS');
+  }
+
+  if (!config.rpcUrl?.trim() || !/^https?:\/\/.+/.test(config.rpcUrl)) {
+    throw new ModalFormError('Invalid or missing RPC URL. Must be a valid HTTP/HTTPS URL.', 'ERR_INVALID_RPC_URL');
+  }
+
   sharedConfig = config;
 
   const openModal = () => {
