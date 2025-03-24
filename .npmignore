@@ -1,0 +1,39 @@
+# Development files
+node_modules/
+.git/
+.gitignore
+.npmignore
+*.log
+.DS_Store
+.env*
+
+# Source and test files
+src/
+tests/
+__tests__/
+*.test.*
+*.spec.*
+
+# Configuration files
+vite.config.ts
+.eslintrc*
+.prettierrc*
+.babelrc*
+
+# Build and preview directories
+preview/
+coverage/
+
+# Development tools
+.vscode/
+.idea/
+.github/
+
+# Documentation and examples
+docs/
+examples/
+README.md
+
+# Package files
+package-lock.json
+yarn.lock
