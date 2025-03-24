@@ -6,7 +6,7 @@ A React module for creating modal forms with ease.
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
+git clone https://github.com/kritarth1107/modal-form-module
 cd modal-form-module
 ```
 
